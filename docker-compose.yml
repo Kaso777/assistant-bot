@@ -1,0 +1,8 @@
+services:
+  task-bot:
+    build: .
+    container_name: telegram-zen-flow-assistant-bot
+    env_file: .env
+    volumes:
+      - ./tasks.db:/app/tasks.db
+    restart: unless-stopped
